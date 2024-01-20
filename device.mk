@@ -134,11 +134,12 @@ PRODUCT_COPY_FILES += \
 ifneq ($(filter %_waydroid_x86 %_waydroid_x86_64,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += \
     libffmpeg_omx \
+    android.hardware.media.c2@1.2-ffmpeg-service \
     media_codecs_ffmpeg.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.hwaccel=1
+    media.sf.hwaccel=0
 endif
 
 # Memtrack
